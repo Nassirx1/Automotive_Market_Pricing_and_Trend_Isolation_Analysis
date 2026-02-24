@@ -1,6 +1,6 @@
 # 🚗 Automotive Market Pricing & Trend Isolation Analysis
 
-> A data-driven valuation framework for used vehicle markets isolating model-level price performance from macroeconomic noise and quantifying key depreciation drivers.
+> A data-driven valuation framework for used vehicle markets isolating model price performance from macroeconomic noise and quantifying key depreciation drivers.
 
 ---
 
