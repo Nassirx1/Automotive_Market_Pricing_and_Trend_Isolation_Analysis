@@ -6,7 +6,7 @@
 
 ## Overview
 
-Used vehicle pricing is notoriously sensitive to external shocks supply chain disruptions, fuel price swings, and demand anomalies like the COVID-19 pandemic can distort market signals and make it difficult to evaluate how a specific vehicle model is truly performing. This project builds a granular pricing analysis pipeline that separates model-level trends from macroeconomic noise, producing clean, actionable insights for inventory pricing and procurement decisions.
+Used vehicle pricing is  sensitive to external shocks supply chain disruptions, fuel price swings, and demand anomalies like the COVID-19 pandemic can distort market signals and make it difficult to evaluate how a specific vehicle model is truly performing. This project builds a granular pricing analysis pipeline that separates model-level trends from macroeconomic noise, producing clean, actionable insights for inventory pricing and procurement decisions.
 
 ---
 
