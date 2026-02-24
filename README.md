@@ -1,62 +1,25 @@
-# Cars-data-set-analysis
+# 🚗 Automotive Market Pricing & Trend Isolation Analysis
 
-# 🚗 Cars Data Analysis Project
-## 📌 Project Overview
-This repository presents a comprehensive Exploratory Data Analysis (EDA) of a cars dataset, aiming to extract insightful patterns useful for predictive modeling, market trend evaluation, and informed automotive decisions.
+> A data-driven valuation framework for used vehicle markets isolating model-level price performance from macroeconomic noise and quantifying key depreciation drivers.
 
-Dataset Source: Kaggle Cars Dataset
+---
 
-## 📚 Dataset Features
-Model: Specific car model
+## Overview
 
-Year: Year of manufacture
+Used vehicle pricing is notoriously sensitive to external shocks supply chain disruptions, fuel price swings, and demand anomalies like the COVID-19 pandemic can distort market signals and make it difficult to evaluate how a specific vehicle model is truly performing. This project builds a granular pricing analysis pipeline that separates model-level trends from macroeconomic noise, producing clean, actionable insights for inventory pricing and procurement decisions.
 
-Price: Selling price of the car
+---
 
-Transmission: Manual, Automatic, Semi-Auto, etc.
+## Key Features
 
-Mileage: Total distance traveled by the car
+### 📊 Granular Valuation Model — Pivot Table Cohort Segmentation
+Vehicle records are segmented into cohorts by make, model, year, and fuel type using multi-dimensional pivot tables. This cohort-based structure allows the analysis to isolate how a specific model performs independently of market-wide events. For example, the 2020 COVID-19 demand spike — which inflated prices across the entire used car market — is flagged and isolated so that its distortion doesn't contaminate long-term model valuation trends.
 
-Fuel Type: Petrol, Diesel, Hybrid, etc.
+### 🧹 Time-Series Cleaning Pipeline — Rolling Window Imputation
+Historical pricing data is rarely complete. Auction gaps, discontinued trims, and sparse regional records leave holes in time-series that can mislead trend analysis. A **5-year rolling window imputation strategy** is applied to fill missing values by referencing local price behavior within a contextually relevant time horizon — long enough to capture trend patterns, short enough to remain sensitive to local economic conditions rather than blending across structurally different market periods.
 
-Tax: Road tax amount
-
-MPG: Miles per gallon (fuel efficiency)
-
-Engine Size: Engine capacity in liters
-
-Manufacturer: Car brand/manufacturer
-
-## 🧹 Data Cleaning Process
-Numeric Data: Missing numeric values (price, fuel efficiency, tax, engine size) were handled by averaging data from a 5-year window around the missing year, smoothing economic variations.
-
-Categorical Data: Filled missing transmission and fuel type data using the previous year's data for consistency.
-
-## 📊 Graphical Analysis
-Fuel Type Distribution: Pie chart analysis revealed majority Petrol (55.1%), followed by Diesel (41.5%), Hybrid (3.1%), and others.
-
-Transmission Type: Pie chart showed Manual (57%), Semi-Automatic (23%), Automatic (20%), indicating manual transmissions dominate older models.
-
-Price Trends by Year: Line chart illustrated overall price trends, noting a sharp price dip during COVID-19 (2020), followed by recovery.
-
-### Limitation: Line charts of overall data might fail to distinguish between inflationary effects, economic trends, and shifts in popularity or availability of specific car models.
-
-## 💡 Creative Implementation (Advanced Insights)
-To overcome limitations in the general price trend analysis, we implemented:
-
-Correlation Matrix: Identified relationships between numeric features; e.g., price and engine size (positive correlation), price and mileage (negative correlation).
-
-Pivot Table Visualization: Created detailed model-specific yearly analyses, examining trends in:
-
-Prices (year-over-year changes)
-
-Fuel Efficiency (km per liter)
-
-Road Tax Amounts
-
-Model Popularity (listing counts)
-
-This deeper analysis helps clearly separate model-specific trends from broader economic influences and provides targeted insights valuable for marketing, competitive strategy, and customer decision-making.
+### 📉 Correlation Analysis — Depreciation Driver Quantification
+Pearson and Spearman correlation analyses are conducted between vehicle pricing and two primary depreciation drivers: **mileage** and **engine size**. Results are used to calibrate the valuation model and provide inventory managers with quantified, interpretable decision support — e.g., the expected price impact per 10,000 km of additional mileage for a given vehicle cohort.
 
 ## Participants in the project: 
 Nassir Almotairi ,Abdullah Alqurashi, Rayan Majed and Mohammad Saad
